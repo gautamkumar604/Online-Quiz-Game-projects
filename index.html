@@ -235,6 +235,7 @@
             resetState();
             questionElement.innerHTML = `Your Score ${score} out of ${questions.length} !`
             nextButton.innerHTML = "Play Again"
+            backButton.style.display = "none"
             nextButton.style.display = "block"
         }
         function handleNextButton(){
