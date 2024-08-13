@@ -1,0 +1,33 @@
+function handleBackButton(){
+            currentQuestionIndex--;
+            if((currentQuestionIndex < questions.length) && (currentQuestionIndex >= 0)){
+                showQuestion();
+                Array.from(answerButtons.children).forEach(button =>{
+                if(button.dataset.correct === 'true'){
+                    button.classList.add("correct");
+                }
+                button.disabled = 'true';
+                });
+                if(selectedBtn.dataset.correct === 'true'){
+                  button.classList.add("correct");
+                }
+                else{
+                  button.classList.add("incorrect");
+                }
+            }
+        }
+
+
+        backButton.addEventListener('click',()=>{
+            if(currentQuestionIndex > 0){
+                handleBackButton();
+            }
+        })
+
+         backButton.style.display = "block"
+            if(currentQuestionIndex === 0){
+              backButton.style.opacity = 0.7;
+            }
+            else{
+              backButton.style.opacity = 1;
+            }
